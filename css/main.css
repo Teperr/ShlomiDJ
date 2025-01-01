@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Section 1 - Banner */
+.banner {
+    background-image: url('/img/omer_and_shira_wedding.jpg');
+    /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+/* Section 2 - social Buttons */
+.social {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.social a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+}
+
+.social a i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.social {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+
+    color: aliceblue;
+    font-weight: 600;
+}
+
+
+
+/* SECTION 3 RECOMANDED */
+h2 {
+    color: #f3c623;
+    margin-bottom: 20px;
+}
+
+.testimonials {
+    background-color: #bababa;
+    padding: 20px;
+    direction: rtl;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+}
+
+.testimonial h3 {
+    color: #f3c623;
+    margin: 10px 0;
+}
+
+.gallery {
+    position: relative;
+    margin-top: 30px;
+    overflow: hidden;
+    height: 300px;
+}
+
+.gallery-track {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
