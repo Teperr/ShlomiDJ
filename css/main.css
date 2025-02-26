@@ -3,75 +3,72 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Section 1 - Banner */
-.banner {
-    background-image: url('../img/omer_and_shira_wedding.jpg');
-    /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
+/* Header Section */
+header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-
+    background-color: #0d2a3f;
+    padding: 15px 20px;
+    color: white;
     position: relative;
 }
 
-/* Section 2 - social Buttons */
-.social {
-    background-color: black;
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
     color: white;
-    text-align: center;
-    padding: 20px 0;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.social {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .social a {
     text-decoration: none;
     color: white;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 16px;
 }
 
 .social a i {
     font-size: 24px;
-    margin-bottom: 5px;
 }
 
-.social {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
+/* Banner Section */
+.banner {
+    background-image: url('../img/omer_and_shira_wedding.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    position: relative;
 }
 
-.logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-
-
-    color: aliceblue;
-    font-weight: 600;
-}
-
-
-
-/* SECTION 3 RECOMANDED */
+/* Testimonials Section */
 h2 {
-    color: #f3c623;
+    color: white;
     margin-bottom: 20px;
 }
 
 .testimonials {
-    background-color: #bababa;
+    background-color: #0d2a3f;
     padding: 20px;
     direction: rtl;
+    margin-block-start: 25px;
+    color: wheat;
 }
 
 .testimonial {
@@ -79,10 +76,11 @@ h2 {
 }
 
 .testimonial h3 {
-    color: #f3c623;
+    color: white;
     margin: 10px 0;
 }
 
+/* Gallery Section */
 .gallery {
     position: relative;
     margin-top: 30px;
@@ -111,3 +109,131 @@ h2 {
         transform: translateX(-100%);
     }
 }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .social {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        padding: 20px 0;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .social a {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .social.open {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* תפריט צד מוסתר כברירת מחדל */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* מתחיל מחוץ למסך */
+    width: 250px; /* ניתן לשנות לגודל הרצוי */
+    height: 100vh;
+    background-color: #0d2a3f;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* תפריט מופיע */
+.sidebar.open {
+    right: 0;
+}
+
+/* קישורים בתוך התפריט */
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar a i {
+    font-size: 24px;
+}
+
+/* כפתור סגירה */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+}
+
+
+footer {
+    background-color: #0d2a3f; /* צבע כהה כמו בתמונה */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-block-start: 25px;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* סגנון לאייקון 3 נקודות */
+.footer-menu {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 10px auto 0;
+    cursor: pointer;
+}
+
+.footer-menu i {
+    font-size: 20px;
+    color: white;
+}
+

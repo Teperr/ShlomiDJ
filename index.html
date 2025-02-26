@@ -7,83 +7,58 @@
     <title>Shimi Shirazi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Section 1 - Banner */
-        .banner {
-            background-image: url('img/omer_and_shira_wedding.jpg');
-            /* Replace with your image */
-            background-size: cover;
-            background-position: center;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            position: relative;
-        }
-
-        /* Section 2 - social Buttons */
-        .social {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .social a {
-            text-decoration: none;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 16px;
-        }
-
-        .social a i {
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-
-        .social {
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            text-transform: uppercase;
-        }
-
-        .logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-
-
-            color: aliceblue;
-            font-weight: 600;
-        }
-    </style> -->
 </head>
 
-<body>
+<body onload="sayHi()">
 
-    <!-- Section 1: Banner -->
-    <section class="banner">
+    <header>
         <div class="logo">SHLOMI SHERM</div>
-        <!-- Background image will be set here -->
-        <!-- <img src="img/omer_and_shira_wedding.jpg" alt=""> -->
-    </section>
+        <button class="menu-toggle" id="menu-toggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="social" id="social-menu">
+            <a href="https://tiktok.com/@djshlomishrem" target="_blank">
+                <i class="fab fa-tiktok"></i> טיקטוק
+            </a>
+            <a href="https://instagram.com/djshlomishrem" target="_blank">
+                <i class="fab fa-instagram"></i> אינסטגרם
+            </a>
+            <a href="https://facebook.com/profile.php?id=1800880850" target="_blank">
+                <i class="fab fa-facebook"></i> פייסבוק
+            </a>
+            <a href="https://wa.me/0502401919" target="_blank">
+                <i class="fab fa-whatsapp"></i> וואטסאפ
+            </a>
+        </nav>
+    </header>
+
+    <!-- כפתור המבורגר -->
+    <!-- <button class="menu-toggle" id="menu-toggle" onclick="toggleNav()">
+        <i class="fas fa-bars"></i>
+    </button> -->
+
+    <!-- תפריט צדדי -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleNav()">&times;</button>
+        <a href="https://tiktok.com/@djshlomishrem" target="_blank">
+            <i class="fab fa-tiktok"></i> טיקטוק
+        </a>
+        <a href="https://instagram.com/djshlomishrem" target="_blank">
+            <i class="fab fa-instagram"></i> אינסטגרם
+        </a>
+        <a href="https://facebook.com/profile.php?id=1800880850" target="_blank">
+            <i class="fab fa-facebook"></i> פייסבוק
+        </a>
+        <a href="https://wa.me/0502401919" target="_blank">
+            <i class="fab fa-whatsapp"></i> וואטסאפ
+        </a>
+    </div>
 
 
-    <!-- Section 2: social Buttons with Logo -->
-    <section class="social">
+
+    <!-- <section class="social">
+        <a href="" class="logo">SHLOMI SHERM</a>
+
         <a href="https://tiktok.com/@djshlomishrem?_t=8shxkfJAdFJ&_r=1" target="_blank">
             <i class="fab fa-tiktok"></i>
             טיקטוק
@@ -100,6 +75,11 @@
             <i class="fab fa-whatsapp"></i>
             וואטסאפ
         </a>
+    </section> -->
+
+    <section class="banner">
+        <!-- Background image will be set here -->
+        <!-- <img src="img/omer_and_shira_wedding.jpg" alt=""> -->
     </section>
 
 
@@ -107,21 +87,20 @@
     <section class="testimonials">
         <h2>לקוחות ממליצים</h2>
         <div class="testimonial">
-            <p>"שלומי האדיר, תודה רבה על הכל! האירוע היה פשוט מדהים בזכותך!"</p>
             <h3>אושר ולין</h3>
-            <small>חיפה</small>
+            <p>"שלומי האדיר, תודה רבה על הכל! האירוע היה פשוט מדהים בזכותך!"</p>
         </div>
         <div class="testimonial">
-            <p>"שלומי, אתה פשוט מלך! דאגת שהאירוע יהיה מושלם, תודה רבה!"</p>
             <h3>דניאל וירון</h3>
-            <small>תל אביב</small>
+            <p>"שלומי, אתה פשוט מלך! דאגת שהאירוע יהיה מושלם, תודה רבה!"</p>
         </div>
         <div class="testimonial">
-            <p>"האירוע היה מעבר לכל הציפיות. תודה שגרמת לנו לחייך כל כך הרבה!"</p>
             <h3>מעיין ועדי</h3>
-            <small>רעננה</small>
+            <p>"האירוע היה מעבר לכל הציפיות. תודה שגרמת לנו לחייך כל כך הרבה!"</p>
         </div>
     </section>
+
+    
 
 
     <!-- Section 4: Gallery -->
@@ -134,6 +113,26 @@
             <img src="img/shlomi5.jpg" alt="Event Photo 5">
         </div>
     </section>
+
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:shlomi.shrem@example.com">shlomi.shrem@example.com</a>
+            <p>054-1234567</p>
+            <p>משה דיין 40, חולון</p>
+        </div>
+        <div class="footer-bottom">
+            <p>2025© made by Teper Digital</p>
+        </div>
+    </footer>
+    
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/service.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/menu.js"></script>
 </body>
+
+
 
 </html>
